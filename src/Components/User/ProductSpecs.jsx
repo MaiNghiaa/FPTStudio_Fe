@@ -11,7 +11,10 @@ const ProductSpecs = ({ DetailItem }) => {
                 {DetailItem && DetailItem.DataCard ? (
                   DetailItem.DataCard.map((Items, index) => {
                     return (
-                      <div className="flex-[0_0_50%] max-w-[50%] md:flex-[0_0_100%] md:max-w-full">
+                      <div
+                        className="flex-[0_0_50%] max-w-[50%] md:flex-[0_0_100%] md:max-w-full"
+                        key={index}
+                      >
                         {DetailItem.category === "iphone" ||
                         DetailItem.category === "Ipad" ||
                         DetailItem.category === "Mac" ? (

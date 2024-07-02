@@ -21,10 +21,17 @@ export default function ListItem() {
   // const [uniqueColors, setuniqueColors] = useState(null);
 
   const [Linkto, setLinkto] = React.useState(null);
+
   function Find(event) {
     console.log(event.target.value);
   }
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
   const handleChange = (event) => {
     const value = event.target.value;
     if (value === "LtH") {
@@ -45,7 +52,7 @@ export default function ListItem() {
   };
   useEffect(() => {
     if (Product) {
-      console.log(Product);
+      // console.log(Product);
       setLinkto(Product);
       axios
         .get(`http://localhost:3000/${Product}`)
@@ -58,7 +65,6 @@ export default function ListItem() {
         });
     }
   }, []); //Chi fetch API 1 lần
-
   // const navigationPrevRef = React.useRef(null);
   // const navigationNextRef = React.useRef(null);
 
@@ -77,29 +83,17 @@ export default function ListItem() {
         </ol>
 
         <h1 className="h1 text-center text-4xl leading-9 font-medium mb-8">
-          {Product}
+          {Product.replace("_", " ") || Product.replace("-", " ")}
         </h1>
         <main className="rounded-[6px] bg-[#ffffff] shadow-[0_1px_4px_rgba(10,10,10,.15)] block">
           <div>
             <div className="action pt-[24px] pb-[8px] px-[24px]">
               <div className="mb-[24px] py-[4px] px-[72px] rounded-md bg-[#f8f9fa] shadow-[inset_0_2px_4px_rgba(4,4,4,.15)] relative">
-                <Swiper
-                  // install Swiper modules
-                  modules={[Navigation, Pagination, Scrollbar, A11y]}
-                  spaceBetween={20}
-                  slidesPerView={6}
-                  onSwiper={(swiper) => console.log(swiper)}
-                  onSlideChange={() => console.log("slide change")}
-                >
-                  <SwiperSlide>
-                    <button
-                      onChange={() => Find(99)}
-                      className="whitespace-nowrap w-auto min-w-[140px] text-center inline-block text-[16px] leading-6 font-normal text-[#6a737a] py-[6px] px-3 rounded"
-                    >
-                      Tất cả
-                    </button>
-                  </SwiperSlide>
-                  {/* {productData ? (
+                {/* <input
+                  type="text"
+                  className="whitespace-nowrap outline-none bg-transparent w-full text-left inline-block text-[16px] leading-6 font-normal text-[#6a737a] py-[6px] px-3 rounded"
+                /> */}
+                {/* {productData ? (
                     productData.map((product, index) => (
                       <SwiperSlide>
                         <button
@@ -113,7 +107,7 @@ export default function ListItem() {
                   ) : (
                     <p>Loading...</p>
                   )} */}
-                </Swiper>
+                {/* </Swiper> */}
               </div>
               <div className="content flex justify-end items-center gap-2">
                 <div className="text text-sm leading-5 font-normal text-[#444b52]">

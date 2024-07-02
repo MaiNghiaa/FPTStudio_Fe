@@ -11,13 +11,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { EffectCoverflow, Pagination } from "swiper/modules";
-import {
-  Gallery1,
-  Gallery2,
-  Gallery3,
-  Gallery4,
-  Gallery5,
-} from "./../../../Utils/utils";
+
 export default function FooterGallery() {
   return (
     <div className="footer__gallery-inner">
@@ -43,19 +37,34 @@ export default function FooterGallery() {
           className="mySwiper"
         >
           <SwiperSlide>
-            <img src={Gallery1} alt="" />
+            <img
+              src="http://localhost:3000/assets/images/Store/Gallery1.jpg"
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Gallery2} alt="" />
+            <img
+              src="http://localhost:3000/assets/images/Store/Gallery2.jpg"
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Gallery3} alt="" />
+            <img
+              src="http://localhost:3000/assets/images/Store/Gallery3.jpg"
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Gallery4} alt="" />
+            <img
+              src="http://localhost:3000/assets/images/Store/Gallery4.jpg"
+              alt=""
+            />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={Gallery5} alt="" />
+            <img
+              src="http://localhost:3000/assets/images/Store/Gallery5.jpg"
+              alt=""
+            />
           </SwiperSlide>
         </Swiper>
       </div>

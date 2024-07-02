@@ -204,3 +204,65 @@ a.text-link:before {
   border-radius: 4px;
   transition: all 0.3s ease-in-out;
 }
+
+.out-of-stock.form-group {
+  background-color: #f8f9fa;
+  padding: 24px 40px;
+  border: 1px solid #e1e4e6;
+  border-radius: 6px;
+}
+.out-of-stock .form-head {
+  margin-bottom: 16px;
+  text-align: center;
+}
+.out-of-stock .form-head .form-title {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #212529;
+}
+.out-of-stock .form-head .form-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #444b52;
+}
+
+.out-of-stock .form-content .info .info-item {
+  width: calc(50% - 8px);
+}
+.out-of-stock .form-content input {
+  padding: 5px 11px;
+  border: 1px solid #cbd1d6;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #939ca3;
+  width: 100%;
+}
+
+.out-of-stock .form-submit .btn-signup {
+  height: 48px;
+  padding: 0 38px;
+}
+.btn-link {
+  color: #fff;
+  background: #0664f9;
+  outline: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  user-select: none;
+  font-family: inherit;
+  border-radius: 4px;
+  padding: 16px 24px;
+  transition: all 0.3s cubic-bezier(0, 0, 0.4, 1);
+  border: 1px solid transparent;
+  cursor: pointer;
+}

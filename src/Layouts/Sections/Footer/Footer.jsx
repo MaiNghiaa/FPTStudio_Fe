@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  iconitem,
-  iconcrown,
-  iconshield,
-  iconlike,
-} from "../../../Utils/utils";
+
 export default function Footer() {
   return (
     <div className="footer text-white">
@@ -12,7 +7,11 @@ export default function Footer() {
         <div className="footer__container w-[100%] px-[12px] mx-auto max-w-[1200px]">
           <ul className="flex justify-center gap-12">
             <li className="flex gap-2">
-              <img src={iconlike} alt="" className="icon w-[48px] h-[48px]" />
+              <img
+                src="http://localhost:3000/assets/images/icons/like.png"
+                alt=""
+                className="icon w-[48px] h-[48px]"
+              />
               <div className="footer__group-text flex flex-col justify-start items-start">
                 <div className="title text-white text-[16px] leading-[24px] font-medium">
                   Thương hiệu đảm bảo
@@ -23,7 +22,11 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex gap-2">
-              <img src={iconshield} alt="" className="icon w-[48px] h-[48px]" />
+              <img
+                src="http://localhost:3000/assets/images/icons/shield.png"
+                alt=""
+                className="icon w-[48px] h-[48px]"
+              />
 
               <div className="footer__group-text flex flex-col justify-start items-start">
                 <div className="title text-white text-[16px] leading-[24px] font-medium">
@@ -35,7 +38,11 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex gap-2">
-              <img src={iconshield} alt="" className="icon w-[48px] h-[48px]" />
+              <img
+                src="http://localhost:3000/assets/images/icons/shield.png"
+                alt=""
+                className="icon w-[48px] h-[48px]"
+              />
 
               <div className="footer__group-text flex flex-col justify-start items-start">
                 <div className="title text-white text-[16px] leading-[24px] font-medium">
@@ -47,7 +54,11 @@ export default function Footer() {
               </div>
             </li>
             <li className="flex gap-2">
-              <img src={iconcrown} alt="" className="icon w-[48px] h-[48px]" />
+              <img
+                src="http://localhost:3000/assets/images/icons/crown.png"
+                alt=""
+                className="icon w-[48px] h-[48px]"
+              />
 
               <div className="footer__group-text flex flex-col justify-start items-start">
                 <div className="title text-white text-[16px] leading-[24px] font-medium">
@@ -140,7 +151,10 @@ export default function Footer() {
                 </ul>
               </div>
               <div className="img max-w-[140px] align-middle">
-                <img src={iconitem} alt="" />
+                <img
+                  src="http://localhost:3000/assets/images/icons/item.png"
+                  alt=""
+                />
               </div>
             </div>
 

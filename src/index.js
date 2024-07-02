@@ -14,13 +14,11 @@ Sentry.init({
 });
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Sentry.ErrorBoundary fallback={"An error has occurred"}>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </Sentry.ErrorBoundary>
-  </React.StrictMode>,
+  <Sentry.ErrorBoundary fallback={"An error has occurred"}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Sentry.ErrorBoundary>,
   document.getElementById("root")
 );
 // If you want to start measuring performance in your app, pass a function

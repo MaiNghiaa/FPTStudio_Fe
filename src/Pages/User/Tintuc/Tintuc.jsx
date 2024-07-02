@@ -30,7 +30,7 @@ export default function Tintuc() {
             >
               <div className="img-item w-full max-w-[776px] mr-6">
                 <img
-                  src=""
+                  src="http://localhost:3000/assets/images/List/Workshop/WS2.webp"
                   alt=""
                   className="w-[376px] h-[211.44px] object-cover border-none"
                 />
@@ -73,7 +73,7 @@ export default function Tintuc() {
               >
                 <div className="img-item w-full max-w-[776px] mr-6">
                   <img
-                    src=""
+                    src="http://localhost:3000/assets/images/List/Workshop/WS2.webp"
                     alt=""
                     className="w-[376px] h-[211.44px] object-cover border-none"
                   />
@@ -106,7 +106,7 @@ export default function Tintuc() {
               >
                 <div className="img-item w-full max-w-[776px] mr-6">
                   <img
-                    src=""
+                    src="http://localhost:3000/assets/images/List/Workshop/WS2.webp"
                     alt=""
                     className="w-[376px] h-[211.44px] object-cover border-none"
                   />
@@ -139,7 +139,7 @@ export default function Tintuc() {
               >
                 <div className="img-item w-full max-w-[776px] mr-6">
                   <img
-                    src=""
+                    src="http://localhost:3000/assets/images/List/Workshop/WS2.webp"
                     alt=""
                     className="w-[376px] h-[211.44px] object-cover border-none"
                   />

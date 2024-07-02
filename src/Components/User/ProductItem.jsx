@@ -23,7 +23,7 @@ const ProductItem = React.memo(function ProductItem({
   MinRom,
   // colors,
 }) {
-  console.log(MinRom, ColorDefault);
+  // console.log(MinRom, ColorDefault);
 
   return (
     <div
@@ -36,8 +36,9 @@ const ProductItem = React.memo(function ProductItem({
         >
           <img
             className="w-[307px] h-[240px] object-contain transition-[all_.3s_ease]"
-            src={require(`./../../assets/images/List/Items/${product.image_caption_URL}`)}
+            src={`http://localhost:3000/assets/${product.image_caption_URL}`}
             // /images/List/Items/
+
             alt=""
           />
         </Link>

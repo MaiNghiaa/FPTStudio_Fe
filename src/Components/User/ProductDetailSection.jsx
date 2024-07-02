@@ -18,7 +18,7 @@ const ProductDetailSection = ({ headingData, descriptionData }) => {
                         <b>
                           <img
                             alt=""
-                            src={require(`../../assets/images/ImageProductDetail/${Heading.Image_heading}`)}
+                            src={`http://localhost:3000/assets/${Heading.Image_heading}`}
                           />
                         </b>
                       </p>
@@ -38,7 +38,7 @@ const ProductDetailSection = ({ headingData, descriptionData }) => {
                       <p style={{ marginBottom: 11, textAlign: "center" }}>
                         <img
                           alt="iPhone 15 Pro Max Khung titan cao cấp, nhẹ và bền bỉ"
-                          src={require(`../../assets/images/ImageProductDetail/Desc/${Desc.Image}`)}
+                          src={`http://localhost:3000/assets/${Desc.Image}`}
                         />
                       </p>
                     </div>

@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 export default function News() {
   return (
@@ -10,7 +11,7 @@ export default function News() {
               <picture className="rounded-[6px_6px_0_0] block ">
                 <img
                   className="w-[576px] h-[240px]"
-                  src={require("../../../../assets/images/Slider/banner2.png")}
+                  src="http://localhost:3000/assets/images/Slider/banner2.png"
                   alt=""
                 />
               </picture>
@@ -31,7 +32,7 @@ export default function News() {
               <picture className="rounded-[6px_6px_0_0] block ">
                 <img
                   className="w-[576px] h-[240px]"
-                  src={require("../../../../assets/images/Slider/banner3.jpg")}
+                  src="http://localhost:3000/assets/images/Slider/banner3.jpg"
                   alt=""
                 />
               </picture>
@@ -52,7 +53,7 @@ export default function News() {
               <picture className="rounded-[6px_6px_0_0] block ">
                 <img
                   className="w-[576px] h-[240px]"
-                  src={require("../../../../assets/images/Slider/banner3.jpg")}
+                  src="http://localhost:3000/assets/images/Slider/banner3.jpg"
                   alt=""
                 />
               </picture>
@@ -72,7 +73,7 @@ export default function News() {
               <picture className="rounded-[6px_6px_0_0] block ">
                 <img
                   className="w-[576px] h-[240px]"
-                  src={require("../../../../assets/images/Slider/banner1.png")}
+                  src="http://localhost:3000/assets/images/Slider/banner1.png"
                   alt=""
                 />
               </picture>

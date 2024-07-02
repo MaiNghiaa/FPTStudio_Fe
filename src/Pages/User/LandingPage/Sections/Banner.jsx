@@ -2,7 +2,12 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-const Banner = ({ banners }) => {
+const banners = [
+  "http://localhost:3000/assets/images/Slider/banner1.png",
+  "http://localhost:3000/assets/images/Slider/banner2.png",
+  "http://localhost:3000/assets/images/Slider/banner3.jpg",
+];
+const Banner = () => {
   return (
     <div className="flex justify-between items-center">
       <Swiper
