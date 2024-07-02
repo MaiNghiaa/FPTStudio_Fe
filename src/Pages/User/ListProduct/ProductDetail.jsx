@@ -35,6 +35,7 @@ export default function ProductDetail() {
   const [ComboPricing, setComboPricing] = useState(0);
   const [OldComboPricing, setOldComboPricing] = useState(0);
   const [ColorPick, setColorPick] = useState();
+  const [Rom, setRom] = useState(RomMin);
   const [NameComboPricing, setNameComboPricing] = useState(
     "Bảo hành 1 năm cơ bản"
   );
@@ -77,7 +78,7 @@ export default function ProductDetail() {
 
     fetchData();
   }, []);
-  // console.log(DataImg);
+  console.log(DetailItem);
   const handleSubmitFormInfo = (e) => {
     e.preventDefault();
     axios
@@ -116,6 +117,7 @@ export default function ProductDetail() {
   };
 
   const handleRomClick = (RomName) => {
+    setRom(RomName);
     const updatedDetailItem = {
       ...DetailItem,
       RomMin: RomName,
@@ -157,12 +159,13 @@ export default function ProductDetail() {
     setTotalQuantity(total);
     localStorage.setItem("totalQuantity", total);
   }, []);
-  const handleBuy = (e, rom) => {
+  const handleBuy = (e) => {
     e.preventDefault();
     if (!DataImg) {
       console.error("DataImg is not loaded yet");
       return;
     }
+    console.log(Rom);
     // console.log(ColorPick);
     // console.log(DataImg);
     let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
@@ -172,7 +175,7 @@ export default function ProductDetail() {
     for (let i = 0; i < cartItems.length; i++) {
       if (
         cartItems[i].detail === Detail &&
-        cartItems[i].rom === rom &&
+        cartItems[i].rom === Rom &&
         cartItems[i].comboPricing === ComboPricing &&
         cartItems[i].nameComboPricing === NameComboPricing &&
         cartItems[i].ColorPick === ColorPick
@@ -188,7 +191,7 @@ export default function ProductDetail() {
         detail: Detail,
         totalPrice: TotalPricing,
         oldPrice: OldPrice,
-        rom: rom,
+        rom: Rom,
         ImgURL: DataImg,
         ColorPick: ColorPick,
         oldComboPricing: OldComboPricing,
@@ -196,7 +199,24 @@ export default function ProductDetail() {
         nameComboPricing: NameComboPricing,
         quantity: 1,
       };
-      cartItems.push(newItem);
+      // const foundProduct = DetailItem.DataPricing.find(
+      //   (item) =>
+      //     item.DetailCR.some(
+      //       (detail) => detail.Color_name === ColorPick
+      //       // detail
+      //     ) && Rom === item.Rom
+      // );
+      // console.log(foundProduct);
+      // if (
+      //   foundProduct &&
+      //   DetailItem.DetailCate === Detail &&
+      //   newItem.quantity <= foundProduct.Quantity
+      // ) {
+      //   cartItems.push(newItem);
+      // } else {
+      //   console.error("Số lượng vượt quá số lượng trong kho!");
+      //   return;
+      // }
 
       console.log("Đã thêm sản phẩm mới vào giỏ hàng:", newItem);
     }
@@ -262,11 +282,11 @@ export default function ProductDetail() {
                             />
                           </picture>
                           {/* <input
-                            type="text"
-                            id="imgURL"
-                            hidden
-                            value={`http://localhost:3000/assets/${img.ImageURL}`}
-                          /> */}
+                              type="text"
+                              id="imgURL"
+                              hidden
+                              value={`http://localhost:3000/assets/${img.ImageURL}`}
+                            /> */}
                         </SwiperSlide>
                       ))}
                   </Swiper>
@@ -590,7 +610,7 @@ export default function ProductDetail() {
                         <form
                           id="receiveEmail"
                           onSubmit={handleSubmitFormInfo}
-                          // action="true"
+                          action
                         >
                           <div className="form-content">
                             <div className="info flex w-full justify-between mb-2">

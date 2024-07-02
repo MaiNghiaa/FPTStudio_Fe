@@ -54,7 +54,7 @@ export default function Header() {
         </div>
       </div>
       <div className="header-bot bg-[#212529] flex justify-center items-center">
-        <div className="wrapper w-[100%] max-w-[1200px] px-[12px] mx-[auto] flex items-center">
+        <div className="wrapper w-[100%] max-w-[1200px] px-[12px] mx-[auto] flex items-center justify-center">
           <ul className="flex shink-0 big:flex-row small:flex-col small:hidden">
             <li className="flex justify-center items-center py-[19px] px-0 text-[#939ca3] text-[14px] leading-[14px] font-[400] min-w-[122px]">
               <Link to="/iphone" className="flex justify-center items-center">
@@ -84,7 +84,7 @@ export default function Header() {
                 Phụ kiện
               </Link>
             </li>
-            <li className="flex justify-center items-center py-[19px] px-0 text-[#939ca3] text-[14px] leading-[14px] font-[400] min-w-[122px]">
+            {/* <li className="flex justify-center items-center py-[19px] px-0 text-[#939ca3] text-[14px] leading-[14px] font-[400] min-w-[122px]">
               <Link
                 //  to="/tin-tuc"
                 to="https://fstudiobyfpt.com.vn/tin-tuc"
@@ -92,7 +92,7 @@ export default function Header() {
               >
                 Tin tức
               </Link>
-            </li>
+            </li> */}
             <li className="flex justify-center items-center py-[19px] px-0 text-[#939ca3] text-[14px] leading-[14px] font-[400] min-w-[122px]">
               <Link to="/today" className="flex justify-center items-center">
                 Workshop

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { formatCash } from "../../../Utils/utils"; // Sử dụng hàm formatCash nếu bạn có hàm này để định dạng tiền tệ
+import { formatCash } from "../../../Utils/utils";
 
 const Orders = () => {
   const [orderData, setOrderData] = useState(null);
@@ -139,12 +139,15 @@ const Orders = () => {
 
                               <div className="flex flex-col items-end gap-[4px]">
                                 <p className="text-blue-600 text-xl font-semibold">
-                                  {item.price_per_item}đ
+                                  {formatCash(item.price_per_item.toString())}đ
                                 </p>
                                 {item.old_price_per_item && (
                                   <strike className="text-base font-normal text-right">
                                     {" "}
-                                    {item.old_price_per_item}đ
+                                    {formatCash(
+                                      item.old_price_per_item.toString()
+                                    )}
+                                    đ
                                   </strike>
                                 )}
                               </div>
@@ -163,21 +166,27 @@ const Orders = () => {
                               <p class="text-[#cb1c22] text-base font-semibold">
                                 {item.ComboPricing === 0
                                   ? " "
-                                  : item.ComboPricing + "đ"}
+                                  : formatCash(item.ComboPricing.toString()) +
+                                    "đ"}
                               </p>
                               <p class="text-base font-semibold text-[#657384]">
                                 <del>
                                   {" "}
                                   {item.oldComboPricing === 0
                                     ? " "
-                                    : item.oldComboPricing + "đ"}
+                                    : formatCash(
+                                        item.oldComboPricing.toString()
+                                      ) + "đ"}
                                 </del>
                               </p>
                             </div>
                           </div>
                         </div>
                         <div className="line my-3"></div>
-                        <div>Tổng {item.TotalinProduct + "đ"}</div>
+                        <div>
+                          Tổng{" "}
+                          {formatCash(item.TotalinProduct.toString()) + "đ"}
+                        </div>
                       </div>
                     ))}
                   </div>

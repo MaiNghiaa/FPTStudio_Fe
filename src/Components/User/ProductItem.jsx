@@ -23,7 +23,7 @@ const ProductItem = React.memo(function ProductItem({
   MinRom,
   // colors,
 }) {
-  console.log(MinRom, ColorDefault);
+  // console.log(MinRom, ColorDefault);
 
   return (
     <div
